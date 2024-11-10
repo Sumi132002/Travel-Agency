@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="./Screenshot (100).png" alt="Brand Logo" class="brand-logo">
+            <h1>TRAVEL AGENCY</h1> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Book</a></li>
+                <li>
+                    <a href="#">Packages</a>
+                    <ul class="dropdown">
+                        <li><a href="#">United States</a></li>
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">France</a></li>
+                        <li><a href="#">Germany</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='login.html'">Login</button>
+                <button onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Background Section -->
+    <div class="background-image">
+        <div class="welcome-text">
+            <h2>Welcome to Travel Agency</h2>
+            <h1 id="country-name">Visit <span>Placename</span></h1>
+            <button class="book-now">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Booking Form Section -->
+    <div class="container">
+        <div class="row">
+            <div class="left-section">
+                <img  src="./Screenshot (100).png" alt="Brand Image">
+            </div>
+            <div class="right-section">
+                <form id="booking-form">
+                    <label for="destination">Where to:</label>
+                    <select id="destination" required>
+                        <option value="" disabled selected>Select a place</option>
+                        <option value="Paris">Paris</option>
+                        <option value="New York">New York</option>
+                        <option value="Tokyo">Tokyo</option>
+                    </select>
+
+                    <label for="persons">How Many Persons:</label>
+                    <input type="number" id="persons" required min="1">
+
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" required min="<?php echo date('Y-m-d'); ?>">
+
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" required minlength="50" maxlength="500"></textarea>
+<br/><br/>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="packages-section">
+        <h2>Package Gallery</h2>
+        <div class="packages-row">
+           
+            <div class="package-card">
+                <img src="./light1.png" alt="Place 1">
+                <h3>Glassy Zone</h3>
+                <p>Attractions: The Glass House is best understood as a pavilion for viewing the surrounding landscape.The palaces and castles commonly built in baroque architecture, include elaborate ornate decoration.</p>
+                <p>Price: $4,699</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./hampi1.jpg" alt="Place 1">
+                <h3>Hampi</h3>
+                <p>Attractions: The austere, grandiose site of Hampi was the last capital of the last great Hindu Kingdom of Vijayanagar.</p>
+                <p>Price: $19,999</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./mysore1.jpg" alt="Place 1">
+                <h3>Mysore</h3>
+                <p>Attractions: The place is recognized as palace city of India and declared as a heritage city.The top sightseeing places in Mysore are Mysore Palace, Brindavan Gardens, Somanathapura Temple.</p>
+                <p>Price: $9,999</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./licensed-image.jpg" alt="Place 1">
+                <h3>Taj Mahal</h3>
+                <p>Attractions: The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor, Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife, Mumtaz Mahal.</p>
+                <p>Price: $10,659</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./paris1.jpg" alt="Place 1">
+                <h3>Paris</h3>
+                <p>Attractions: Paris is the capital of France and is known for its beauty, art, fashion, and culture.A blend of both old and new architecture, parks and squares, the beautiful Seine River, and the beautiful Parisians make it a unique and fascinating place to visit or to live in.</p>
+                <p>Price: $98,599</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./leh1.jpg" alt="Place 1">
+                <h3>Leh Ladak</h3>
+                <p>Attractions: Ladakh is most famous for breathtaking landscapes, the crystal clear skies, the highest mountain passes, thrilling adventure activities, Buddhist Monasteries and festivals.</p>
+                <p>Price: $999</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./manali1.jpg" alt="Place 1">
+                <h3>Manali</h3>
+                <p>Attractions:  Manali is the real starting point of an ancient trade route which crosses the Rohtang and Baralacha passes, and runs via Lahul and Ladakh to Kashmir while divergent road connects it with Spiti.</p>
+                <p>Price: $25,299</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./srinagar1.jpg" alt="Place 1">
+                <h3>Srinagar</h3>
+                <p>Attractions: The capital city of Srinagar is located 1585 meters above sea level. The city is famous for its gardens, lakes and houseboats. It is also known for traditional Kashmiri handicrafts and dried fruits. The city is located on both the sides of the Jhelum River, which is called Vyath in Kashmir.</p>
+                <p>Price: $19,999</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="./Khajjiar1.jpg" alt="Place 1">
+                <h3>Khajjiar</h3>
+                <p>Attractions: Khajjiar is famous for the popular Khajji Naga shrine dedicated to the serpent god from which the name is believed to have been derived. The temple dates back to the 10th century and is interspaced with different patterns and images on the ceiling and wooden posts.</p>
+                <p>Price: $75,999</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="services-section">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Affordable Hotel</li>
+            <li>Food & Drinks</li>
+            <li>Safety Guide</li>
+            <li>Adventure Activities</li>
+            <li>Transport Services</li>
+            <li>24/7 Customer Support</li>
+        </ul>
+    </div>
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="./online-bus-booking-services.png" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="./Travel-Experiences.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="./travel-x.jpg" alt="Gallery Image 3">
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="about-row">
+            <div class="about-image">
+                <img src="https://kawre540adventures.netlify.app/images/about-img.avif" alt="About Us">
+            </div>
+            <div class="about-info">
+                <h2>About Us</h2>
+                <p><strong>Established: 2024</strong></p>
+                <p>We are a dedicated company committed to providing the best products and services to our customers. Our team consists of experienced professionals who are passionate about their work.</p>
+                <p>At Travel Agency Adventures, we believe in quality and customer satisfaction. Our vision is to become a leader in our industry by continually improving our products and services.</p>
+                <p>For more information, feel free to <a href="index.html">contact us</a> or visit our website</a>.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p style="color:white">TRAVEL AGENCY</p>
+            <div class="social-media">
+                <a href="#" aria-label="Instagram"><img src="./download (1).jpg" alt="Instagram"></a>
+                <a href="#" aria-label="Facebook"><img src="./facebook-logo-facebook-icon-free-free-vector.jpg" alt="Facebook"></a>
+            </div>
+            <p style="color:white">&copy; 2024 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Country Name Rotator -->
+    <script>
+        const countries = ["USA", "India", "France", "Germany", "Italy", "Spain"];
+        let index = 0;
+
+        setInterval(() => {
+            document.getElementById('country-name').querySelector('span').textContent = countries[index];
+            index = (index + 1) % countries.length;
+        }, 2000);
+    </script>
+</body>
+</html>
